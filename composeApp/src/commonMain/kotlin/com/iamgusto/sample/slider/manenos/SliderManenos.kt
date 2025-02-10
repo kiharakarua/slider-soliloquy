@@ -29,7 +29,7 @@ fun SliderManenos() {
     }
 
     fun decreaseMutableIndex() {
-        mutableIndex = (mutableIndex - 1) % names.size
+        mutableIndex = (mutableIndex + names.size - 1) % names.size
     }
     Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
         Text(names.get(mutableIndex))
